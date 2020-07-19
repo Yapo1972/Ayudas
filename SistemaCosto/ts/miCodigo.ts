@@ -1,29 +1,42 @@
-class ejemplo{
-    valorNumerico:number = 0;
-    valorCadena:string = "";
-    constructor( num:number, cad:string){
-        this.valorNumerico = num;
-        this.valorCadena = cad;
-    }
+interface elementosAyuda {
+  titulo: string;
+  ficheroHTML:string;
+  elementos: Array<{
+    texto: string;
+    indice: string;
+  }>;
+}
+interface jsonAyuda {
+  ayuda: elementosAyuda;
 }
 
-function obtenerPorciento(valor:number, total:number, cantDecimales: number ):string {
-    let resultado = "0";
-    if( total>0 ){
-        resultado = `${(valor*100/total).toFixed(cantDecimales)} %`;
-    }
-    return resultado;
-    
+function renderizandoJSON(datos: jsonAyuda) {
+  $("#titulo").text(datos.ayuda.titulo);
+  var elementos = datos.ayuda.elementos;
+  let barraLateral = $("#sidebar");
+  for (let i = 0; i< elementos.length; i++ ) {
+    let elementoAdicionar = $(
+      `<a class="btn-link btn-block text-left p-2" href='#${elementos[i].indice}'>${elementos[i].texto}</a>`
+    );
+    barraLateral.append(elementoAdicionar);
+  }
+}
+function asignarAltoBarraLateral(){
+    let altoMenu = $('#menuP').height() as number;
+    let altoPagina = $(window).height() as number;
+    $("#sidebar").height( altoPagina );
 }
 
-$(document).ready(()=>{
-    $('.tema').click(function(){
-        let datos = $(this).data();
-    });
 
-    $('#sidebar').height($(window).height() as number);
+$(document).ready(() => {
+   $.getJSON("./JSON/SCosto.json", renderizandoJSON);
+  let barraLateral = $('#sidebar');
+  let contenido =$('#contenido');
+  let altoMenu = $('#menuP').height() as number;
+  barraLateral.css("margin-top", altoMenu+15);
+  asignarAltoBarraLateral();
+  contenido.load('./parciales/costos.html');
+  contenido.css("margin-top", altoMenu+15);
+  
 
-
-
-
-})
+});

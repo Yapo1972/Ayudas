@@ -1,23 +1,25 @@
 "use strict";
-var ejemplo = /** @class */ (function () {
-    function ejemplo(num, cad) {
-        this.valorNumerico = 0;
-        this.valorCadena = "";
-        this.valorNumerico = num;
-        this.valorCadena = cad;
+function renderizandoJSON(datos) {
+    $("#titulo").text(datos.ayuda.titulo);
+    var elementos = datos.ayuda.elementos;
+    var barraLateral = $("#sidebar");
+    for (var i = 0; i < elementos.length; i++) {
+        var elementoAdicionar = $("<a class=\"btn-link btn-block text-left p-2\" href='#" + elementos[i].indice + "'>" + elementos[i].texto + "</a>");
+        barraLateral.append(elementoAdicionar);
     }
-    return ejemplo;
-}());
-function obtenerPorciento(valor, total, cantDecimales) {
-    var resultado = "0";
-    if (total > 0) {
-        resultado = (valor * 100 / total).toFixed(cantDecimales) + " %";
-    }
-    return resultado;
+}
+function asignarAltoBarraLateral() {
+    var altoMenu = $('#menuP').height();
+    var altoPagina = $(window).height();
+    $("#sidebar").height(altoPagina);
 }
 $(document).ready(function () {
-    $('.tema').click(function () {
-        var datos = $(this).data();
-    });
-    $('#sidebar').height($(window).height());
+    $.getJSON("./JSON/SCosto.json", renderizandoJSON);
+    var barraLateral = $('#sidebar');
+    var contenido = $('#contenido');
+    var altoMenu = $('#menuP').height();
+    barraLateral.css("margin-top", altoMenu + 15);
+    asignarAltoBarraLateral();
+    contenido.load('./parciales/costos.html');
+    contenido.css("margin-top", altoMenu + 15);
 });

@@ -1,7 +1,15 @@
 body{
-    background-color: cyan;
+    background-color: rgb(220, 134, 247);
 
 }
 #sidebar{
-    background-color: rgb(189, 194, 241);
+    border: solid 1px cadetblue;
+}
+
+.elementosSB:hover{
+    color: cadetblue;
+}
+
+li.elementosSB{
+    list-style: circle;
 }

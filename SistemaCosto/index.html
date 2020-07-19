@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayuda del Sistema de Costo</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/estilos.css"">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema de ayudas de Softwares Compacto</title>
+        <link rel="shortcut icon" href="./ico/ayuda.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/estilos.css"">
 </head>
 <body>
-
-    <h2 class=" alert alert-danger text-center fixed-top">Ayuda del Sistema de Costo</h2>
-    <div class=" container-fluid d-flex">
-        <div class="row">
-            <div class="col-md-2 mt-n3 " id="sidebar">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Introducción</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fundamentación</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link tema" href="#">Prorrateo</a>
-                    </li>
-                </ul>
+    <nav class=" navbar navbar-expand-lg navbar-light fixed-top " style="background-color:cadetblue;">
+        <div class="collapse navbar-collapse justify-content-end" id="menuP">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Costos</a>
+                <a class="nav-item nav-link active" href="#">Producción</a>
+                <a class="nav-item nav-link active" href="#">No Conformidades</a>
+                <a class="nav-item nav-link active" href="#">Contratación</a>
+                <a class="nav-item nav-link active" href="#">Presupuestos</a>
             </div>
         </div>
-    </div>
+        </nav>
+        <div  id="contenedor">
+            <div class="row">
+                <div class="col-md-2 fixed-top" id="sidebar">
+                </div>
+                <div class="col-md-10 offset-2" id="contenido">
+                </div>
+
+            </div>
+        </div>
 
 
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/miCodigo.js"></script>
-    </body>
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+         <script src="./js/miCodigo.js"></script>
+        </body>
 
 </html>

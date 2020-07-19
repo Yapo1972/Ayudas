@@ -1,0 +1,24 @@
+{
+  "ayuda": {
+    "titulo": "Ayuda del Sistema de Costo de Compacto Caribe S.A.",
+    "ficheroHTML":"costos.html",
+    "elementos": [
+      {
+        "texto": "Introducción",
+        "indice": "introduccion"
+      },
+      {
+        "texto": "Cálculo de índices",
+        "indice": "indices"
+      },
+      {
+        "texto": "Costo presupuestado",
+        "indice": "costopresup"
+      },
+      {
+        "texto": "Prorrateo de gastos",
+        "indice": "prorrateo"
+      }
+    ]
+  }
+}
