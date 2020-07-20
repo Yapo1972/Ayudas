@@ -1,5 +1,9 @@
+@font-face { font-family: lora; src: url('../fonts/Lora-VariableFont_wght.ttf'); } 
+ 
+
 body{
     background-color: rgb(220, 134, 247);
+    font-family: lora;
 
 }
 #sidebar{
