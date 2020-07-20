@@ -1,0 +1,25 @@
+{
+    "ayuda": {
+      "titulo": "Ayuda del Software para el Control de la Producción",
+      "ficheroHTML":"produccion.html",
+      "elementos": [
+        {
+          "texto": "Introducción",
+          "indice": "introduccion"
+        },
+        {
+          "texto": "Pantallas principales",
+          "indice": "pprincipales"
+        },
+        {
+          "texto": "Datos diarios",
+          "indice": "datosdiarios"
+        },
+        {
+          "texto": "Reportes",
+          "indice": "reportes"
+        }
+      ]
+    }
+  }
+  

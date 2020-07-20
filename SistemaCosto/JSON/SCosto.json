@@ -16,8 +16,8 @@
         "indice": "costopresup"
       },
       {
-        "texto": "Prorrateo de gastos",
-        "indice": "prorrateo"
+        "texto": "Costo real",
+        "indice": "costoreal"
       }
     ]
   }

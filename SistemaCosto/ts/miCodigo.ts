@@ -20,6 +20,13 @@ function renderizandoJSON(datos: jsonAyuda) {
     );
     barraLateral.append(elementoAdicionar);
   }
+  let contenido =$('#contenido');
+  let altoMenu = $('#menuP').height() as number;
+  barraLateral.css("margin-top", altoMenu+15);
+  asignarAltoBarraLateral();
+  contenido.load(`./parciales/${datos.ayuda.ficheroHTML}`);
+  contenido.css("margin-top", altoMenu+15);
+
 }
 function asignarAltoBarraLateral(){
     let altoMenu = $('#menuP').height() as number;
@@ -29,14 +36,21 @@ function asignarAltoBarraLateral(){
 
 
 $(document).ready(() => {
-   $.getJSON("./JSON/SCosto.json", renderizandoJSON);
+  let ayudas = [
+    './JSON/SCosto.json',
+    './JSON/produccion.json',
+    './JSON/enconstruccion.json',
+    './JSON/enconstruccion.json'
+  ];
+  let url = window.location.search;
+  let parametros = new URLSearchParams(url);
+  let numeroAyuda = parametros.get('Ayuda');
+  let indice = 0;
+  if( numeroAyuda ){
+    indice = parseInt(numeroAyuda);
+  }
+   $.getJSON(ayudas[indice], renderizandoJSON);
   let barraLateral = $('#sidebar');
-  let contenido =$('#contenido');
-  let altoMenu = $('#menuP').height() as number;
-  barraLateral.css("margin-top", altoMenu+15);
-  asignarAltoBarraLateral();
-  contenido.load('./parciales/costos.html');
-  contenido.css("margin-top", altoMenu+15);
   
 
 });

@@ -2,56 +2,127 @@
 <h4 id="introduccion"><b>Introducción</b></h4>
 <p style="text-align: justify;" class="p-2">
     Con vistas a facilitar el control de los costos de nuestra empresa, se realizó este Software.
-    Teniendo en cuenta que el control de la produccion se realiza utilizando ordenes, como documentos primarios de
+    Teniendo en cuenta que el control de la producción se realiza utilizando órdenes, como documentos primarios de
     nuestros análisis se toman las
-    ordenes generadas en el sistema contable.<br><br>
+    órdenes generadas en el sistema contable.<br><br>
     De manera general el funcionamiento del sistema contempla lo siguiente:
     <ul>
         <li>La referencia que se toma es el campo No.Lote que se introduce en el sistema contable en el momento de crear
             la orden.</li>
+        <img src="../img/sc_nrolote.png" alt="Nro Lote en el Assets" srcset="" class="rounded mx-auto d-block"
+            style="width: 90%; height:300px;">
+
         <li>Los gastos materiales se toman de los vales de salida que se carguen a cada orden.</li>
+        <img src="../img/sc_vales.png" alt="Nro Lote en el Assets" srcset="" class="rounded mx-auto d-block"
+            style="width: 90%; height:300px;">
+
         <li>A cada orden se le asocian gastos directos e indirectos en correspondencia con los metros cuadrados entrados
             al almacén.</li>
         <li>Los índices de los materiales fundamentales se toman de los aprobados en la empresa. Estos se han dividido
             acorde a la clasificación de los productos.</li>
         <li>Los índices de los gastos directos e indirectos se pueden recalcular, pero en la primera versión se tomaron
-            los reales que se tuvieron por metro cuadrado en el período de
+            los reales que se tuvieron por metro cuadrado en el período 
             de enero a octubre del 2019.
         </li>
     </ul>
 
 </p>
-<h4 id="indices" ><b><strong>Cálculo índices</strong></b></h4>
-<p  class="p-4" style="text-align: justify;">
-    Como explicamos en la sección anterior para el cálculo de los indices indirectos se tomaron como referencia los meses de enero a octubre 
-    del año 2019. No obstante si se tienen los privilegios necesarios se pueden cambiar estos índices, ya sea de manera general o de una fábrica en 
-    específico. El cambio de estos indices se realizan en una página en específico:<br><br>
-    <img src="./img/sc_indices.png" alt="Calculo de indices" srcset="" class="rounded mx-auto d-block" style="width: 90%;">
+<h4 id="indices"><b><strong>Cálculo índices</strong></b></h4>
+<p class="p-4" style="text-align: justify;">
+    Como explicamos en la sección anterior para el cálculo de los índices directos e indirectos se tomaron como
+    referencia los meses de enero a octubre
+    del año 2019. No obstante si se tienen los privilegios necesarios se pueden cambiar estos índices, ya sea de manera
+    general o de una fábrica en
+    específico. El cambio de estos índices se realizan en una página en específico:<br><br>
+    <img src="./img/sc_indices.png" alt="Calculo de índices" srcset="" class="rounded mx-auto d-block"
+        style="width: 90%;">
 </p>
-<h4><b><strong>Introducción</strong></b></h4>
-<p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, deleniti? Sunt voluptatem ad pariatur harum. Cumque
-    ullam animi ab id, aut voluptate vel. Debitis, illo? Deleniti numquam inventore officia aliquid!
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime unde quod reiciendis ab dignissimos iste
-    quasi perspiciatis suscipit illo ad, officia, pariatur in, corporis aut nostrum nisi harum quia?
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt id excepturi dicta consectetur, et amet optio
-    modi distinctio. A laborum, numquam natus harum non quibusdam corrupti iure aspernatur ab ipsa?
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, deleniti? Sunt voluptatem ad pariatur harum. Cumque
-    ullam animi ab id, aut voluptate vel. Debitis, illo? Deleniti numquam inventore officia aliquid!
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime unde quod reiciendis ab dignissimos iste
-    quasi perspiciatis suscipit illo ad, officia, pariatur in, corporis aut nostrum nisi harum quia?
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt id excepturi dicta consectetur, et amet optio
-    modi distinctio. A laborum, numquam natus harum non quibusdam corrupti iure aspernatur ab ipsa?
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, deleniti? Sunt voluptatem ad pariatur harum. Cumque
-    ullam animi ab id, aut voluptate vel. Debitis, illo? Deleniti numquam inventore officia aliquid!
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime unde quod reiciendis ab dignissimos iste
-    quasi perspiciatis suscipit illo ad, officia, pariatur in, corporis aut nostrum nisi harum quia?
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt id excepturi dicta consectetur, et amet optio
-    modi distinctio. A laborum, numquam natus harum non quibusdam corrupti iure aspernatur ab ipsa?
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, deleniti? Sunt voluptatem ad pariatur harum. Cumque
-    ullam animi ab id, aut voluptate vel. Debitis, illo? Deleniti numquam inventore officia aliquid!
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime unde quod reiciendis ab dignissimos iste
-    quasi perspiciatis suscipit illo ad, officia, pariatur in, corporis aut nostrum nisi harum quia?
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt id excepturi dicta consectetur, et amet optio
-    modi distinctio. A laborum, numquam natus harum non quibusdam corrupti iure aspernatur ab ipsa?
+<h4 id="costopresup"><b><strong>Costo presupuestado</strong></b></h4>
+<p class="p-4" style="text-align: justify;">
+    Uno de los puntos vitales de cualquier sistema de control de costos es el establecimiento correcto
+    de los costos unitarios planificados. <br>
+    En este sistema en particular la manera que escogimos para realizar este cálculo es el siguiente: <br><br>
+    <i><code>
+            Costo unitario planificado = Costo presupuestado materiales + Costo directo planificado + Costo indirecto
+            planificado
+        </code></i>
+    <br><br>
+    <i><u>Costo presupuestado materiales</u></i><br>
+    Este se calcula teniendo en cuenta los índices de consumo establecidos por nuestra empresa acorde al tipo de
+    producto.
+    Estos tipos pueden ser ECT, CBB, CBE, CEE, CGG. El índice aprobado se puede visualizar cuando se analiza una orden
+    en particular:<br>
+    <img src="../img/nc_gastosmateriales.gif" alt="Gastos materiales" srcset="" class="rounded mx-auto d-block"
+        style="width: 90%;">
+    <br>
+    <i><u>Costo directo e indirecto planificado</u></i><br>
+    Como ya hemos mencionado este se calcula tomando como base los gastos reales de estas cuentas contables de un
+    periodo preestablecido por el administrador del sistema y que puede ser cambiado cuando se decida.
+    Inicialmente este período es de Enero a Octubre del 2019. Con estos datos se calcula el gasto por metro cuadrado de
+    producto terminado, y tomando como base el área de cada producto( establecidos por el departamento técnico en el
+    Sistema Contable ), se calcula el gasto
+    planificado directo e indirecto de cada elemento y subelemento de gasto. Este índice puede visualizarse de la misma
+    manera que con los gastos materiales. Adjunto entre paréntesis se coloca el índice con el cual se está trabajando:
+    <img src="../img/nc_gastosdirec.gif" alt="Calculo de índices" srcset="" class="rounded mx-auto d-block"
+        style="width: 90%;">
+    <br>
+    Acorde a la animación anterior se debe notar que el gasto total planificado se calcula teniendo en cuenta la
+    cantidad de metros cuadrados que entran al almacén, divididos por meses, pues una misma orden puede tener entradas
+    al almacén en diferentes meses.
+    Esto se realiza de esta forma pues a la hora de calcular los gastos reales asociados a cada orden es importante esta
+    división por meses pues el gasto real será diferente en cada mes, aunque el índice planificado sea el mismo.
+    El gasto total planificado por elemento o subelemento de gasto( directo o indirecto ) será la suma del gasto
+    planificado de cada mes en que esta orden tuvo entrada al almacén.
+    <br>
+    Otro punto a tener en cuenta es que para el análisis de los costos indirectos o directos, se excluye el elemento de gasto 11000, pues el gasto material, como se explicó anteriormente se toma de los vales de salida cargados a cada orden.
+
+    <br><br>
+    En este punto es vital entender que los gastos presupuestados( de materiales, directos o indirectos ) se calculan en
+    base a lo real producido. El dato que se coloca en este análisis se debe leer de la siguiente forma:
+    <cite>...este sería el gasto que se planificó para darle entrada al almacén, la cantidad que realmente
+        entró...</cite>. Es importante entender este tema pues, aunque en el momento de entrar los datos iniciales de la
+    orden, se especifica una cantidad planificada, este dato no se
+    toma como referencia para el cálculo de los gastos planificados.
+
+</p>
+<h4 id="costoreal"><b><strong>Costo real</strong></b></h4>
+<p class="p-4" style="text-align: justify;">
+    Al igual que en el caso de los costos planificados, la forma de calcular los costos reales se realiza de la siguiente  manera:
+    <br><br>
+    <i><code>
+        Costo unitario real = Costo real materiales + Costo directo real + Costo indirecto
+        real
+    </code></i>
+<br><br>
+<i><u>Costo real materiales</u></i><br>
+Este se calcula teniendo en cuenta los vales de salida que se le asocian a cada una de las órdenes. Estos vales de salida se asocian a la cuenta 701 0220 11000, es por esta razon que
+en los costos directos e indirectos no se prorratean los datos del elemento 11000. Importante destacar que si existe una diferencia entre el valor contable de la cuenta 701 0220 11000 y la suma
+de todos los vales de salidas cargados a las órdenes, este valor se prorratea entre todas las órdenes del mes. Esto garantiza que aquellos vales que por equivocación o decisión se decida no incluirle el
+número de la orden, su valor sea tenido en cuenta en el cálculo de los costos.
+<br><br>
+<i><u>Costos reales directos e indirectos</u></i><br>
+Estos costos se toman de los saldos de las cuentas 701 0220( gastos directos ) y 731 0201( gastos indirectos ), exceptuando en ambos casos
+el elemento de gasto 11000.<br>
+En cada uno de los elementos y subelementos de gastos, para calcular el monto, se toma el saldo del mes en cuestión y se le resta el saldo del mes anterior.<br>
+Para calcular que monto asociar a cada orden, se calculan la cantidad de metros cuadrados totales que entran al almacén y la cantidad de metros cuadrados de cada orden, se forma un coeficiente
+que es el que se utiliza para dicho monto.<br><br>
+
+<i>C_O_M = C_M_A/ C_M_O
+    <br><br>
+    C_O_M ---> Coeficiente de la orden en el mes<br>
+    C_M_A --->Cantidad de metros cuadrados totales entrados al almacén en el mes<br>
+    C_M_O --->Cantidad de metros cuadrados de la orden entrados al almacén en el mes<br><br>
+
+    G_O_M = C_O_M * G_T_M
+    <br><br>
+    G_O_M ---> Gasto real( directo o indirecto ) asociado a la orden en el mes( Esto se realiza por elemento y subelemento )<br>
+    C_O_M ---> Coeficiente de la orden en el mes<br>
+    G_T_M ---> Gasto total real( directo o indirecto ) del mes( por elemento y subelemento de gasto )<br><br>
+</i>
+    En el análisis que se realiza de la orden, si se pincha sobre el nombre de un mes en el cual dicha orden tuvo entrada al almacén, se desglosa
+    los datos que se han tenido en cuenta para realizar los cálculos:
+    <img src="../img/nc_gastosmes.gif" alt="Gastos reales del mes" srcset="" class="rounded mx-auto d-block"
+        style="width: 90%;">
+   
+
 </p>
